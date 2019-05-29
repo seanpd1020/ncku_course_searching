@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NCKU_Course_Search</string>
+    <string name="title_home">課程查詢</string>
+    <string name="title_notifications">追蹤起來</string>
+    <string name="title_classtimetable">我ㄉ課表</string>
+    <string name="title_myaccount">我ㄉ帳戶</string>
+
+</resources>

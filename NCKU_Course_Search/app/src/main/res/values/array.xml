@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name = "spinner_array">
+        <item>全部</item>>
+        <item>其他</item>
+        <item>非屬學院</item>
+        <item>通識課程</item>
+        <item>文學院</item>
+        <item>理學院</item>
+        <item>工學院</item>
+        <item>管理學院</item>
+        <item>醫學院</item>
+        <item>社會科學院</item>
+        <item>電機資訊學院</item>
+        <item>規劃與設計學院</item>
+        <item>生物科學與科技學院</item>
+    </array>
+</resources>

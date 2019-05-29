@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+    <TextView
+        android:id="@+id/texttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="你的追蹤(๑•̀ω•́)ノ"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/refresh_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/texttext"
+        android:backgroundTint="@android:color/background_light"
+        android:text="更新資料"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        style="@style/Base.TextAppearance.AppCompat.Display1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/refresh_button"
+        android:background="@color/colorBlack"
+        android:checked="true"
+        android:onClick="track_course_notification"
+        android:text="ToggleButton"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/colorAccent"
+        android:textOff="開啟追蹤通知(◔౪◔)"
+        android:textOn="關閉追蹤通知_(:3 ⌒ﾞ)_"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/trackRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toggleButton" />
+
+
+</RelativeLayout>

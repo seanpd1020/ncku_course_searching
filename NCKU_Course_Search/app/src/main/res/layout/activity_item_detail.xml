@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.ncku_course_search.ItemDetail">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/dep_name"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="體育室OPE"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/dep_code"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="系號:A2"
+                android:textColor="@color/colorYellow"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/no"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="序號:001"
+                android:textColor="@color/colorYellow"
+                android:textSize="24dp"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/course_system_code"
+                android:layout_width="118dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dip"
+                android:layout_span="2"
+                android:background="@color/colorBlack"
+                android:text="課程系統碼:\nA210603"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/class_code"
+                android:layout_width="118dp"
+                android:layout_height="70dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="分班碼:1"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/grade"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="年級:1"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/en_teaching"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="英授:Y"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/group"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="組別:"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="類別:講義"
+                android:textColor="@android:color/holo_purple"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/class_no"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:layout_span="2"
+                android:background="@color/colorBlack"
+                android:text="班別:一年級體育(女生組)"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/course_name"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:layout_span="2"
+                android:background="@color/colorBlack"
+                android:text="西洋劍與健康體能"
+                android:textColor="?attr/colorError"
+                android:textSize="24dp"
+                android:textStyle="bold|italic"></TextView>
+
+            <TextView
+                android:id="@+id/compulsory"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="必修"
+                android:textColor="?android:attr/colorAccent"
+                android:textSize="24dp"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/credit"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="學分:0"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/teacher_name"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="鄭匡佑"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/times"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="[1]9~A"
+                android:textColor="?android:attr/colorPressedHighlight"
+                android:textSize="24dp"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/selected_seats"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_margin="1dip"
+                android:layout_span="2"
+                android:background="@color/colorBlack"
+                android:text="已選課人數:19"
+                android:textColor="?android:attr/colorEdgeEffect"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/remain_seats"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="餘額:額滿"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+        </TableRow>
+
+        <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/classroom"
+                android:layout_width="118dp"
+                android:layout_height="40dp"
+                android:layout_margin="1dip"
+                android:layout_span="3"
+                android:background="@color/colorBlack"
+                android:text="教室:中正堂 中正堂東側"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/remarks"
+                android:layout_width="118dp"
+                android:layout_height="60dp"
+                android:layout_margin="1dip"
+                android:layout_span="3"
+                android:background="@color/colorBlack"
+                android:text="備註:[男女合班] 器材可向任課老師登記借用"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/exp_involved"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="業界專家參與:否"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+
+            <TextView
+                android:id="@+id/course_attr_code"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="課程屬性碼:OPE0332"
+                android:textColor="@color/colorWhite"
+                android:textSize="22dp"></TextView>
+
+            <TextView
+                android:id="@+id/moocs"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="Moocs:否"
+                android:textColor="@color/colorWhite"
+                android:textSize="24dp"></TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/restricted_condition"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:layout_span="2"
+                android:background="@color/colorBlack"
+                android:text="限選條件:"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/cross_domain"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
+                android:layout_margin="1dip"
+                android:background="@color/colorBlack"
+                android:text="跨領域學分學程:"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"></TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+
+            <Button
+                android:id="@+id/button_nckuhub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="3"
+                android:background="@color/colorBlack"
+                android:text="查看課程心得"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                android:textStyle="bold">
+
+            </Button>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:background="@color/colorWhite">
+
+
+            <CheckBox
+                android:id="@+id/checkbox2"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_span="3"
+                android:background="@color/colorBlack"
+                android:checked="false"
+                android:onClick="add_remove_classtimetable"
+                android:text="加入課表ヽ(́◕◞౪◟◕‵)ﾉ"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="24sp"></CheckBox>
+
+        </TableRow>
+
+        <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:background="@color/colorWhite">
+
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            style="@android:style/Widget.CompoundButton.CheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="3"
+            android:background="@color/colorBlack"
+            android:checked="false"
+            android:onClick="track_untrack_course"
+            android:text="點擊追蹤(つ´ω`)つ"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="24sp"></CheckBox>
+
+    </TableRow>
+
+    </TableLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

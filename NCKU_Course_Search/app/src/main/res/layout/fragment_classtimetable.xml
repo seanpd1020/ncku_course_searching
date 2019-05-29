@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack"
+        android:text="換ㄍ顏色(ﾟ3ﾟ)～♪"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack">
+
+        <TextView
+            android:text=""
+            android:layout_width="50px"
+            android:layout_height="20dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:text="MON"
+            style="@style/style_text_day"/>
+        <TextView
+            android:text="TUE"
+            style="@style/style_text_day"/>
+        <TextView
+            android:text="WED"
+            style="@style/style_text_day"/>
+        <TextView
+            android:text="THU"
+            style="@style/style_text_day"/>
+        <TextView
+            android:text="FRI"
+            style="@style/style_text_day"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="900dp"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:layout_width="50px"
+                android:layout_height="900dp"
+                android:orientation="vertical"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <TextView
+                    style="@style/style_text_num"
+                    android:text="0" />
+                <TextView
+                    android:text="1"
+                    style="@style/style_text_num" />
+                <TextView
+                    android:text="2"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="3"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="4"
+                    style="@style/style_text_num"/>
+                <TextView
+                    android:text="N"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="5"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="6"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="7"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="8"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="9"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="A"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="B"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="C"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="D"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="E"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="未"
+                    style="@style/style_text_num"
+                    />
+                <TextView
+                    android:text="定"
+                    style="@style/style_text_num"
+                    />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/Monday"
+                layout="@layout/class_time_table_column"/>
+            <include
+                android:id="@+id/Tuesday"
+                layout="@layout/class_time_table_column" />
+
+            <include
+                android:id="@+id/Wednesday"
+                layout="@layout/class_time_table_column"/>
+            <include
+                android:id="@+id/Thursday"
+                layout="@layout/class_time_table_column"/>
+            <include
+                android:id="@+id/Friday"
+                layout="@layout/class_time_table_column"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
