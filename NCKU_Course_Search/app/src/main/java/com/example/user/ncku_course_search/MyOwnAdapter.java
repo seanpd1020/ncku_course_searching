@@ -8,6 +8,7 @@ import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,11 +21,14 @@ import org.w3c.dom.Text;
 public class MyOwnAdapter extends RecyclerView.Adapter<MyOwnAdapter.MyOwnHolder> {
     String data1[];
     Context ctx;
+    ProgressBar pb;
+
     public static final String EXTRA_TARGET_DEPARTMENT_CODE = "com.example.user.ncku_course_search.MainActivity.extra.TARGET_DEPARTMENT_CODE";
 
-    public MyOwnAdapter(Context ct, String[] s1){
+    public MyOwnAdapter(Context ct, String[] s1,ProgressBar pbb){
         ctx = ct;
         data1 = s1;
+        pb = pbb;
     }
 
     @Override
@@ -56,6 +60,7 @@ public class MyOwnAdapter extends RecyclerView.Adapter<MyOwnAdapter.MyOwnHolder>
 
         @Override
         public void onClick(View view){
+            pb.setVisibility(View.VISIBLE);
             int mPosition = getLayoutPosition();
             String element = data1[mPosition];
             Intent intent = new Intent(ctx,CourseDetail.class);

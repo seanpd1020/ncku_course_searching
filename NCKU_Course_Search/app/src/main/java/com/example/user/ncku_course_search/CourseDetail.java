@@ -18,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +46,7 @@ public class CourseDetail extends AppCompatActivity {
     private String home = "http://course-query.acad.ncku.edu.tw/qry/qry001.php?dept_no=";
     private String target;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,8 @@ public class CourseDetail extends AppCompatActivity {
         textView = findViewById(R.id.textView2);
         textView.setText(title);
         target = title.substring(2,4);
+
+        HomeFragment.pb.setVisibility(View.INVISIBLE);
 
         //get target course search
         Thread th = new Thread(new Runnable() {
@@ -172,8 +176,10 @@ public class CourseDetail extends AppCompatActivity {
         r1.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
             @Override
             public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
-                if(e.getAction() == MotionEvent.ACTION_DOWN)
+                if(e.getAction() == MotionEvent.ACTION_DOWN) {
                     downX = e.getX();
+                    //rv.setNestedScrollingEnabled(false);
+                }
                 else if(e.getAction() == MotionEvent.ACTION_MOVE){
                     float moveDistanceX = e.getX() - downX;
                     if(moveDistanceX > 0){
@@ -189,6 +195,7 @@ public class CourseDetail extends AppCompatActivity {
                         if(moveDistanceX > 0)
                             rebackToLeft(moveDistanceX);
                     }
+                    //rv.setNestedScrollingEnabled(true);
                 }
                 return false;
             }

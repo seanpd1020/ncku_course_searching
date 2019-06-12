@@ -41,6 +41,7 @@ public class ItemDetail extends AppCompatActivity {
         bt_nckuhub = findViewById(R.id.button_nckuhub);
 
         scrollview = findViewById(R.id.scroll);
+
         scrollview.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {

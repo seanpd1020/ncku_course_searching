@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 
 import org.jsoup.Jsoup;
@@ -35,6 +36,7 @@ public class HomeFragment extends Fragment {
     String s1[];
     MyOwnAdapter ad;
     Spinner spinner;
+    static ProgressBar pb;
 
     @SuppressLint("ValidFragment")
     public HomeFragment(String[] s){
@@ -46,7 +48,8 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
         final View view = inflater.inflate(R.layout.fragment_home,container,false);
-
+        pb = view.findViewById(R.id.pb);
+        pb.setVisibility(View.INVISIBLE);
         spinner = view.findViewById(R.id.spinner);
         final ArrayAdapter<CharSequence> nAdapter = ArrayAdapter.createFromResource(
                 view.getContext(), R.array.spinner_array, android.R.layout.simple_list_item_1 );
@@ -129,7 +132,7 @@ public class HomeFragment extends Fragment {
                 newitems = new String[new_item_array_list.size()];
                 new_item_array_list.toArray(newitems);
 
-                ad = new MyOwnAdapter(getContext(),newitems);
+                ad = new MyOwnAdapter(getContext(),newitems,pb);
                 r1.setAdapter(ad);
                 r1.setLayoutManager(new LinearLayoutManager(getContext()));
                 DividerItemDecoration divider = new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL);
@@ -144,7 +147,7 @@ public class HomeFragment extends Fragment {
         });
 
         r1 = view.findViewById(R.id.myRecycler);
-        ad = new MyOwnAdapter(getContext(),s1);
+        ad = new MyOwnAdapter(getContext(),s1,pb);
         r1.setAdapter(ad);
         r1.setLayoutManager(new LinearLayoutManager(getContext()));
         DividerItemDecoration divider = new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL);
