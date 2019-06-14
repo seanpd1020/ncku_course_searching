@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ScrollView;
@@ -25,7 +26,8 @@ public class ItemDetail extends AppCompatActivity {
     TextView cross_domain,moocs,credit;
     CheckBox checkBox,checkBox2;
     View decorView;
-    ScrollView scrollview;
+    //ScrollView scrollview;
+    CustomScrollView mcustomScrollView;
     Button bt_nckuhub;
     String EXTRA_COURSE_NAME = "coursename";
     float downX,screen_width,screen_height;
@@ -40,19 +42,21 @@ public class ItemDetail extends AppCompatActivity {
 
         bt_nckuhub = findViewById(R.id.button_nckuhub);
 
-        scrollview = findViewById(R.id.scroll);
-
-        scrollview.setOnTouchListener(new View.OnTouchListener() {
+        //scrollview = findViewById(R.id.scroll);
+        mcustomScrollView = findViewById(R.id.scroll);
+        mcustomScrollView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 if(motionEvent.getAction() == MotionEvent.ACTION_DOWN)
                     downX = motionEvent.getX();
                 else if(motionEvent.getAction() == MotionEvent.ACTION_MOVE){
                     float moveDistanceX = motionEvent.getX() - downX;
-                    if(moveDistanceX > 0){
+                    if(moveDistanceX > 10){
+                        mcustomScrollView.setEnableScrolling(false);
                         decorView.setX(moveDistanceX);
                     }
                 }else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
+                    mcustomScrollView.setEnableScrolling(true);
                     float moveDistanceX = motionEvent.getX() - downX;
                     if(moveDistanceX > screen_width / 2){
                         //finish();

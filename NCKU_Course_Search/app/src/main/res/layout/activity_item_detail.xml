@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.ncku_course_search.ItemDetail">
 
-    <ScrollView
+    <com.example.user.ncku_course_search.CustomScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -417,5 +417,5 @@
     </TableRow>
 
     </TableLayout>
-    </ScrollView>
+    </com.example.user.ncku_course_search.CustomScrollView>
 </android.support.constraint.ConstraintLayout>

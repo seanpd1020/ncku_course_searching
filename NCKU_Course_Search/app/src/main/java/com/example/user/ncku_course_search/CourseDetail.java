@@ -41,6 +41,7 @@ public class CourseDetail extends AppCompatActivity {
     CourseItem items[];
     List<CourseItem> item_array_list = new ArrayList<CourseItem>();
     View decorView;
+    ScrollLinearLayoutManager mscrolllinearlayoutmanager;
     float downX,screen_width,screen_height;
     private TextView textView;
     private String home = "http://course-query.acad.ncku.edu.tw/qry/qry001.php?dept_no=";
@@ -169,7 +170,8 @@ public class CourseDetail extends AppCompatActivity {
         r1 = (RecyclerView)findViewById(R.id.ItemRecyclerView);
         ad = new CourseItemAdapter(getApplicationContext(),items);
         r1.setAdapter(ad);
-        r1.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        mscrolllinearlayoutmanager = new ScrollLinearLayoutManager(getApplicationContext());
+        r1.setLayoutManager(mscrolllinearlayoutmanager);
         DividerItemDecoration divider = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
         divider.setDrawable(ContextCompat.getDrawable(this,R.drawable.my_divider));
         r1.addItemDecoration(divider);
@@ -182,10 +184,12 @@ public class CourseDetail extends AppCompatActivity {
                 }
                 else if(e.getAction() == MotionEvent.ACTION_MOVE){
                     float moveDistanceX = e.getX() - downX;
-                    if(moveDistanceX > 0){
+                    if(moveDistanceX > 10){
+                        mscrolllinearlayoutmanager.setmCanVerticalScroll(false);
                         decorView.setX(moveDistanceX);
                     }
                 }else if(e.getAction() == MotionEvent.ACTION_UP){
+                    mscrolllinearlayoutmanager.setmCanVerticalScroll(true);
                     float moveDistanceX = e.getX() - downX;
                     if(moveDistanceX > screen_width / 2){
                         //finish();
@@ -218,10 +222,12 @@ public class CourseDetail extends AppCompatActivity {
             downX = event.getX();
         else if(event.getAction() == MotionEvent.ACTION_MOVE){
             float moveDistanceX = event.getX() - downX;
-            if(moveDistanceX > 0){
+            if(moveDistanceX > 10){
+                mscrolllinearlayoutmanager.setmCanVerticalScroll(false);
                 decorView.setX(moveDistanceX);
             }
         }else if(event.getAction() == MotionEvent.ACTION_UP){
+            mscrolllinearlayoutmanager.setmCanVerticalScroll(true);
             float moveDistanceX = event.getX() - downX;
             if(moveDistanceX > screen_width / 2){
                 //finish();
