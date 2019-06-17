@@ -15,7 +15,8 @@
 14. EditText
 15. ToggleButton
 16. CheckBox
-17. Jsoup
+17. IntentService
+18. Jsoup
 
 # 分工: #
 1. C14046036 黃品翔 => 課程查詢(RecyclerView，Jsoup)、追蹤通知、課表功能
